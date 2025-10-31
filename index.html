@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎃 Gostosuras ou Travessuras</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Vídeo de fundo -->
+    <video class="video-background" autoplay muted loop playsinline>
+      <source src="assets/background.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Áudio de fundo -->
+    <audio id="theme-audio" loop>
+      <source src="assets/theme.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Controles de Áudio -->
+    <div class="audio-controls">
+      <button id="play-audio" class="audio-btn" title="Tocar música">🎵</button>
+      <button id="pause-audio" class="audio-btn" title="Pausar música">⏸️</button>
+    </div>
+
+    <!-- Container Principal -->
+    <div class="main-container">
+      <h1 class="title">🎃 Gostosuras ou Travessuras</h1>
+      <p class="description">
+        A noite de Halloween chegou! Escolha as melhores guloseimas para maximizar seus pontos mágicos. Mas cuidado: se
+        errar, travessuras sombrias podem acontecer...
+      </p>
+
+      <!-- Área de Entrada -->
+      <div class="input-section">
+        <div class="input-group">
+          <label for="candy-input">🍬 Nome do Doce e Poder Mágico</label>
+          <input type="text" id="candy-input" placeholder="Exemplo: Pirulito Sangrento, 5" autocomplete="off" />
+          <button id="add-candy" class="add-btn">+ Adicionar Doce</button>
+        </div>
+
+        <div class="input-group">
+          <label for="max-houses">🏚️ Número Máximo de Casas</label>
+          <input type="number" id="max-houses" placeholder="Exemplo: 3" min="1" autocomplete="off" />
+        </div>
+
+        <!-- Lista de doces adicionados -->
+        <div id="candy-list" class="candy-list"></div>
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="button-container">
+        <button class="glowing-btn" id="choose-btn">
+          <span class="glowing-txt">ES<span class="faulty-letter">COL</span>HER</span>
+        </button>
+        <button class="glowing-btn" id="return-btn">
+          <span class="glowing-txt">RET<span class="faulty-letter">OR</span>NAR</span>
+        </button>
+      </div>
+
+      <!-- Seção de Resultado -->
+      <div class="result-section" id="result-section">
+        <h2 class="result-title">📊 Resultado</h2>
+        <div class="result-content" id="result-content">
+          <p class="waiting-message">Aguardando seleção das guloseimas...</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
